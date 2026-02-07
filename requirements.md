@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-The AI Legal & Rights Assistant is a conversational AI system designed to provide accessible legal information and rights awareness to common Indians. Built for the AWS AI for Bharat Hackathon, this MVP focuses on democratizing legal knowledge through AI-powered interactions in English and Hindi.
+An AI-powered conversational assistant that provides accessible legal information and rights awareness to common Indians, delivering educational content rather than legal advice through bilingual interactions. The AI Legal & Rights Assistant is a conversational AI system designed to provide accessible legal information and rights awareness to common Indians. Built for the AWS AI for Bharat Hackathon, this MVP focuses on democratizing legal knowledge through AI-powered interactions in English and Hindi.
 
 ## Problem Statement
 
@@ -41,11 +41,11 @@ The AI Legal & Rights Assistant is a conversational AI system designed to provid
 4. **Provide Instant Access**: 24/7 availability for basic legal information
 
 ### Success Criteria
-- **User Engagement**: 1000+ unique users within hackathon period
-- **Query Resolution**: 80% of queries answered satisfactorily without human intervention
-- **Language Support**: Seamless bilingual interaction (English/Hindi)
-- **Response Accuracy**: 90% factual accuracy for supported legal topics
-- **User Satisfaction**: 4+ star rating from user feedback
+- **User Engagement**: Demonstrate meaningful user interactions during hackathon presentation
+- **Query Resolution**: Successfully handle common legal information queries without human intervention
+- **Language Support**: Functional bilingual interaction (English/Hindi) with code-switching capability
+- **Response Quality**: Provide factually accurate information with proper source attribution for supported legal topics
+- **User Experience**: Positive feedback from demo users and judges
 
 ## Functional Requirements
 
@@ -71,6 +71,7 @@ The AI Legal & Rights Assistant is a conversational AI system designed to provid
    - Situation-based rights explanation
    - Legal remedy suggestions
    - Escalation pathways for grievances
+   - **Example**: User asks "मेरे landlord ने बिना notice के rent बढ़ा दिया है, क्या यह legal है?" System responds with tenant rights information, relevant rent control laws, and suggests consulting local tenant rights organizations - clearly stating this is educational information, not legal advice.
 
 5. **Disclaimer and Source Attribution**
    - Clear disclaimers about information vs. advice
@@ -93,10 +94,11 @@ The AI Legal & Rights Assistant is a conversational AI system designed to provid
 ### Usability
 - **Accessibility**: WCAG 2.1 AA compliance
 - **Mobile-First**: Responsive design for mobile devices
-- **Offline Capability**: Basic information cache for poor connectivity areas
+- **Low-Bandwidth Support**: Cached frequently asked questions and lightweight responses for poor connectivity areas
 
 ### Reliability
 - **Data Accuracy**: Regular validation against official sources
+- **Information Freshness**: Clear timestamps on all legal information with "last updated" indicators and disclaimers about potential changes in law
 - **Error Handling**: Graceful degradation for unsupported queries
 - **Fallback Mechanisms**: Human escalation pathways
 
@@ -157,4 +159,4 @@ The AI Legal & Rights Assistant is a conversational AI system designed to provid
 - **Team Size**: Limited hackathon team
 - **Infrastructure**: AWS services within hackathon limits
 - **Testing**: Limited user testing time
-- **Validation**: Reliance on publicly available legal sources for accuracy
+- **Validation**: Reliance on publicly available legal sources for accurracy
