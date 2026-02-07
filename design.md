@@ -59,21 +59,22 @@ The AI Legal & Rights Assistant is a cloud-native, serverless application built 
 #### Security & Monitoring
 - **Amazon CloudWatch**: Logging and monitoring
 - **AWS IAM**: Access control and permissions
-- **AWS WAF**: Web application firewall
+- **AWS WAF**: Web application firewall (production-ready)
 
 ## AI/ML Design
 
 ### Large Language Model Strategy
-- **Primary Model**: Claude 3 Haiku via Amazon Bedrock
+- **Foundation Model**: A suitable foundation model via Amazon Bedrock
   - Cost-effective for hackathon constraints
-  - Strong multilingual capabilities
-  - Good instruction following for disclaimers
-- **Fallback**: Llama 2 70B for complex queries
+  - Multilingual capabilities for Hindi-English processing
+  - Strong instruction following for consistent disclaimer integration
 
 ### Retrieval Augmented Generation (RAG)
 ```
 User Query → Intent Classification → Vector Search → Context Retrieval → LLM Generation → Response with Sources
 ```
+
+All legal information responses are grounded in retrieved, authoritative sources from the knowledge base. No legal information is generated without source attribution and timestamp verification.
 
 #### RAG Pipeline Components
 1. **Query Processing**
@@ -125,11 +126,11 @@ System Prompt Template:
 - **Document Processing**: PDF/HTML extraction and chunking
 - **Embedding Generation**: Amazon Titan Embeddings
 - **Vector Storage**: OpenSearch with HNSW indexing
-- **Metadata**: Source attribution, last updated, authority level
+- **Metadata**: Source attribution, last updated timestamps, authority level verification
 
 ### Data Pipeline
 ```
-Legal Documents → Text Extraction → Chunking → Embedding → Vector Store → Search Index
+Legal Documents → Text Extraction → Chunking → Embedding → Vector Store → Search Index (with timestamp validation)
 ```
 
 ## User Interaction Flow
@@ -148,10 +149,10 @@ Legal Documents → Text Extraction → Chunking → Embedding → Vector Store 
 - **Context Preservation**: Maintain topic continuity
 - **Escalation Paths**: Redirect to human resources when needed
 
-### Voice Interaction
+### Voice Interaction (Future-Ready)
 - **Speech-to-Text**: Amazon Transcribe with Hindi support
 - **Text-to-Speech**: Amazon Polly with Indian English and Hindi voices
-- **Offline Capability**: Cached responses for common queries
+- **Enhanced Accessibility**: Voice capabilities for users with literacy challenges
 
 ## API Design (High-level)
 
@@ -229,9 +230,9 @@ POST /api/v1/feedback
    - Recommendation to consult qualified lawyers
 
 2. **Content Filtering**
-   - Prevent generation of legal advice
+   - Prevent generation of legal advice or case-specific recommendations
    - Block inappropriate or harmful content
-   - Escalation for sensitive situations
+   - Escalation for sensitive situations requiring human intervention
 
 3. **Bias Mitigation**
    - Diverse training data representation
@@ -268,32 +269,32 @@ POST /api/v1/feedback
    - Expand to Tamil, Telugu, Bengali, Marathi
    - Regional legal variations and customs
 
-2. **Advanced AI Capabilities**
-   - Document analysis and summarization
-   - Legal document template generation
-   - Predictive legal insights
+2. **Enhanced User Experience**
+   - Native mobile app development
+   - Voice interaction capabilities
+   - Enhanced offline functionality
 
-3. **Integration Capabilities**
+3. **Advanced AI Capabilities**
+   - Document analysis and summarization
+   - Legal document template suggestions
+   - Enhanced multilingual processing
+
+4. **Integration Capabilities**
    - Government portal integration
    - Legal aid service connections
-   - Court case status tracking
-
-4. **Enhanced User Experience**
-   - Mobile app development
-   - Offline functionality expansion
-   - Personalized legal information
+   - Educational institution partnerships
 
 ### Operational Scaling
-- **Multi-region Deployment**: Reduce latency across India
+- **Multi-region Deployment**: Reduce latency across India (future consideration)
 - **CDN Optimization**: Faster content delivery
 - **Database Sharding**: Handle increased user base
 - **Microservices**: Break down monolithic functions
 
-### Business Model Evolution
-- **Freemium Model**: Basic free, advanced features paid
-- **B2B Services**: Legal aid organizations and NGOs
-- **Government Partnerships**: Official legal information portal
-- **Legal Professional Network**: Verified lawyer referrals
+### Future Considerations
+- **Community Partnerships**: NGO and legal aid organization collaborations
+- **Educational Outreach**: Integration with educational institutions
+- **Government Collaboration**: Official legal information portal partnerships
+- **Professional Network**: Verified legal professional referrals for complex cases
 
 ### Success Metrics and KPIs
 - **User Adoption**: Monthly active users growth
